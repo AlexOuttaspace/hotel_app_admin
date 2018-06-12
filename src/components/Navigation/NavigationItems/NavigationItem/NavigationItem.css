@@ -1,0 +1,18 @@
+.NavigationItem {
+	margin: 0;
+	display: flex;
+	height: 100%;
+	align-items: center;
+	box-sizing: border-box;
+}
+
+.NavigationItem a {
+	box-sizing: border-box;
+	padding: 20px 20px;
+	height: 100%;
+	border-bottom: 3px solid transparent;
+}
+
+.NavigationItem a.active {
+	border-bottom: 3px solid black;
+}
