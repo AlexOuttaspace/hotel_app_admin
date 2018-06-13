@@ -1,4 +1,6 @@
 .BookingListItem {
+	display: flex;
+	justify-content: space-between;
 	padding: 15px 0;
 	border-bottom: 1px solid #ccc;
 }
@@ -6,3 +8,13 @@
 .BookingListItem ul {
 	list-style: none;
 }
+
+.BookingListItem section {
+	display: flex;
+}
+
+.BookingListItem section ul h4{
+	margin: 5px 0;
+}
+
+

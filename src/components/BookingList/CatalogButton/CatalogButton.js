@@ -1,14 +1,19 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom'
+
 import classes from './CatalogButton.css';
+
 const catalogButton = (props) => {
-	const btnClasses = [
-		classes.CatalogButton,
-		props.active ? classes.active : null
-	];
+
 	return (
-		<button className={btnClasses.join(' ')} onClick={props.clicked}>
+		<NavLink
+			exact={props.exact}
+			to={props.to}
+			className={classes.CatalogButton}
+			activeClassName={classes.active}
+			onClick={props.clicked}>
 			{props.children}
-		</button>
+		</NavLink>
 	);
 };
 

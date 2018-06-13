@@ -13,6 +13,17 @@ const bookingListItem = (props) => {
 
 	return (
 		<li className={classes.BookingListItem}>
+			<section>
+				<img src={props.suite.mainImage} alt="Suite" />
+				<ul>
+					<h4>Номер {props.suite.number}</h4>
+					<li>Мест: {props.suite.lodgers}</li>
+					<li>Дополнительных мест: {props.suite.additionalLodgers || 0}</li>
+					<li>Тип номера: {props.suite.roomType}</li>
+					<li>Цена в сутки: {props.suite.cost} р.</li>
+				</ul>
+
+			</section>
 			<ul>
 				<li>Name: {props.name}</li>
 				{props.email && <li>email: {props.email}</li>}
@@ -27,7 +38,10 @@ const bookingListItem = (props) => {
 				<li>From: {props.from}</li>
 				<li>To: {props.to}</li>
 				<li>Price: {props.price} р.</li>
+
 			</ul>
+
+
 		</li>
 	);
 };

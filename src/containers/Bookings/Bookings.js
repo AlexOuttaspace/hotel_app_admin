@@ -16,12 +16,12 @@ class Bookings extends Component {
 		return (
 			<section className={classes.Bookings}>
 				<nav className={classes.CatalogButtons}>
-					<CatalogButton active>New</CatalogButton>
-					<CatalogButton>Confirmed</CatalogButton>
-					<CatalogButton>Payed</CatalogButton>
+					<CatalogButton exact to="/bookings/">Новое</CatalogButton>
+					<CatalogButton to="/bookings/confirmed">Подтверждено</CatalogButton>
+					<CatalogButton to="/bookings/payed">Оплачено</CatalogButton>
 				</nav>
 				<BookingList bookings={bookings} />;
-			</section>
+			</section >
 		);
 	}
 }

@@ -5,6 +5,8 @@ export const bookings = [
 		confirmed: false,
 		_id: '5b1ff27805611f2f7c907021',
 		suite: {
+			mainImage: 'http://assol-primorskiy.ru/jomres/uploadedimages/1/rooms/16/thumbnail/001.jpg',
+			cost: 1000,
 			rooms: 1,
 			lodgers: 3,
 			additionalLodgers: 1,
@@ -40,6 +42,8 @@ export const bookings = [
 		confirmed: false,
 		_id: '5b1ff29393038328c4756751',
 		suite: {
+			mainImage: 'http://assol-primorskiy.ru/jomres/uploadedimages/1/rooms/16/thumbnail/001.jpg',
+			cost: 1000,
 			rooms: 1,
 			lodgers: 3,
 			additionalLodgers: 1,
@@ -75,6 +79,7 @@ export const bookings = [
 		confirmed: false,
 		_id: '5b1ff2a9be92bf2b00a601e8',
 		suite: {
+			mainImage: 'http://assol-primorskiy.ru/jomres/uploadedimages/1/rooms/16/thumbnail/001.jpg',
 			rooms: 1,
 			lodgers: 3,
 			additionalLodgers: 1,
@@ -110,6 +115,7 @@ export const bookings = [
 		confirmed: false,
 		_id: '5b1ff30523bad810dc4a0d56',
 		suite: {
+			mainImage: 'http://assol-primorskiy.ru/jomres/uploadedimages/1/rooms/16/thumbnail/001.jpg',
 			rooms: 1,
 			lodgers: 3,
 			additionalLodgers: 1,
@@ -145,6 +151,7 @@ export const bookings = [
 		confirmed: false,
 		_id: '5b1ff3961f1b20252c192b7a',
 		suite: {
+			mainImage: 'http://assol-primorskiy.ru/jomres/uploadedimages/1/rooms/16/thumbnail/001.jpg',
 			rooms: 1,
 			lodgers: 3,
 			additionalLodgers: 1,
