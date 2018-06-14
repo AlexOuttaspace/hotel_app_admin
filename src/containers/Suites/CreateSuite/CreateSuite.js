@@ -1,50 +1,110 @@
 import React, { Component } from 'react';
-
+import { Form, Text, Select } from 'react-form'
 import classes from './CreateSuite.css'
 
+const validate = value => {
+  return /^[0-9]{3,5}$/.test(value) ? null : 'Input should be a single digit'
+}
+
+const roomTypes = [
+  {
+    label: 'Люкс',
+    value: 'люкс',
+  },
+  {
+    label: 'Полулюкс',
+    value: 'полулюкс',
+  },
+]
+
 class CreateSuite extends Component {
+
   state = {}
+  submitHandler = (...args) => {
+    console.log(args)
+  }
   render() {
     return (
-      <section className={classes.CreateSuite}>
-        <form>
-          <div>
-            <label htmlFor="number">Номер:</label>
-            <input id='number' name='number' type="number" />
-          </div>
-          <div>
-            <label htmlFor="rooms">Комнат:</label>
-            <input id='rooms' name='rooms' type="number" />
-          </div>
-          <div>
-            <label htmlFor="lodgers">Мест:</label>
-            <input id='lodgers' name='lodgers' type="number" />
-          </div>
-          <div>
-            <label htmlFor="additionalLodgers">Дополнительных мест:</label>
-            <input id='additionalLodgers' name='additionalLodgers' type="number" />
-          </div>
-          <div>
-            <label htmlFor="roomType">Тип номера:</label>
-            <select id='roomType' name='roomType'>
-              <option value="люкс">Люкс</option>
-              <option value="полулюкс">Полулюкс</option>
-            </select>
-          </div>
-          <div>
-            <label htmlFor="features">Удобства:</label>
-            <input id='features' name='features' type="text" />
-          </div>
-          <div>
-            <label htmlFor="mainImage">Главное фото:</label>
-            <input id='mainImage' name='mainImage' type="text" />
-          </div>
-          <div>
-            <button>Добавить ценовой период</button>
-          </div>
-          <button>Создать новый номер</button>
-        </form>
-      </section>
+      <Form onSubmit={this.submitHandler} validateOnSubmit>
+        {formApi => (
+          <form onSubmit={formApi.submitForm} className={classes.Form}>
+            <div className={classes.FlexWrapper}>
+              <section className={classes.LeftSection}>
+                <div className={classes.InputItem}>
+                  <label htmlFor="number">Номер: </label>
+                  <span>
+                    <Text field="number" id="number" validate={validate} />
+                    <p className={classes.ErrorMessage}>
+                      {formApi.errors && formApi.errors.number}
+                    </p>
+                  </span>
+                </div>
+
+                <div className={classes.InputItem}>
+                  <label htmlFor="rooms">Комнат: </label>
+                  <span>
+                    <Text field="rooms" id="rooms" validate={validate} />
+                    <p className={classes.ErrorMessage}>
+                      {formApi.errors && formApi.errors.number}
+                    </p>
+                  </span>
+                </div>
+
+                <div className={classes.InputItem}>
+                  <label htmlFor="roomType">Тип номера:</label>
+                  <span>
+                    <Select placeholder=' ' selected="Люкс" field="roomType" id="rooType" options={roomTypes} />
+                    <p className={classes.ErrorMessage}>
+                      {formApi.errors && formApi.errors.number}
+                    </p>
+                  </span>
+                </div>
+
+
+              </section>
+
+              <section className={classes.RightSection}>
+                <div className={classes.InputItem}>
+                  <label htmlFor="lodgers">Мест: </label>
+                  <span>
+                    <Text field="lodgers" id="lodgers" validate={validate} />
+                    <p className={classes.ErrorMessage}>
+                      {formApi.errors && formApi.errors.number}
+                    </p>
+                  </span>
+                </div>
+
+                <div className={classes.InputItem}>
+                  <label htmlFor="additionalLodgers">Доп. мест: </label>
+                  <span>
+                    <Text field="additionalLodgers" id="additionalLodgers" validate={validate} />
+                    <p className={classes.ErrorMessage}>
+                      {formApi.errors && formApi.errors.number}
+                    </p>
+                  </span>
+
+                </div>
+
+                <div className={classes.InputItem}>
+                  <label htmlFor="lodgers">Мест: </label>
+                  <span>
+                    <Text field="lodgers" id="lodgers" validate={validate} />
+                    <p className={classes.ErrorMessage}>
+                      {formApi.errors && formApi.errors.number}
+                    </p>
+                  </span>
+                </div>
+              </section>
+            </div>
+
+
+
+            <button type="submit">
+              Создать номер
+            </button>
+          </form>
+        )}
+      </Form>
     )
   }
 }

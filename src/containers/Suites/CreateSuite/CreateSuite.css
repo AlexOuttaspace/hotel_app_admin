@@ -1,7 +1,36 @@
-.CreateSuite {
-  width: 1000px;
+.Form {
+  display: inline-block;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 600px;
   max-width: 100%;
   margin: 20px auto;
   text-align: center;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.LeftSection, .RightSection {
+  min-width: 250px;
+}
+
+.FlexWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.InputItem {
+  display: flex;
+  justify-content: space-between;
+}
+
+.InputItem input, .InputItem select {
+  width: 100px;
+  box-sizing: border-box;
+  outline: none;
+  border: 1px solid #888;
+  padding: 5px;
+}
+
+.InputItem label {
+  padding: 5px;
 }
