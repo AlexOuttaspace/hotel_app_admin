@@ -374,3 +374,6 @@ export const bookings = [
 		__v: 0
 	}
 ];
+
+
+export const suites = []

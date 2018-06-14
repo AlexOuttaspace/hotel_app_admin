@@ -41,7 +41,6 @@ const bookingListItem = (props) => {
 
 			</ul>
 
-
 		</li>
 	);
 };
